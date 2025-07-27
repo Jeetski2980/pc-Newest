@@ -66,6 +66,9 @@ export default function Home() {
           </div>
         </aside>
       </div>
+
+      {/* Floating Action Buttons */}
+      <FloatingActions />
     </main>
   )
 }
