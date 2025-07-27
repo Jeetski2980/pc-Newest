@@ -1,5 +1,5 @@
 'use client'
-import { Star, ArrowLeft, Cpu, HardDrive, MemoryStick, Zap, Monitor, Motherboard } from 'lucide-react'
+import { Star, ArrowLeft, Cpu, HardDrive, MemoryStick, Zap, Monitor, CircuitBoard, Gamepad2, Snowflake, Package } from 'lucide-react'
 import ComponentCard from './ComponentCard'
 
 interface BuildRecommendationsProps {
