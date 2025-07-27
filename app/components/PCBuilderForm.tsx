@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react'
-import { Star, Cpu, Monitor, Settings } from 'lucide-react'
+import { Star, Cpu, Monitor, Settings, Sparkles } from 'lucide-react'
+import LoadingSpinner from './LoadingSpinner'
 
 interface PCBuilderFormProps {
   onGenerate: (data: any) => void
@@ -23,6 +24,8 @@ export default function PCBuilderForm({ onGenerate }: PCBuilderFormProps) {
     preferIntelNvidia: false
   })
   const [additionalRequirements, setAdditionalRequirements] = useState('')
+  const [isLoading, setIsLoading] = useState(false)
+  const [focusedField, setFocusedField] = useState<string | null>(null)
 
   const handlePreferenceChange = (key: string) => {
     setPreferences(prev => ({
@@ -31,7 +34,7 @@ export default function PCBuilderForm({ onGenerate }: PCBuilderFormProps) {
     }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
 
     // Validate budget range
@@ -41,6 +44,11 @@ export default function PCBuilderForm({ onGenerate }: PCBuilderFormProps) {
       return
     }
 
+    setIsLoading(true)
+
+    // Simulate AI processing time
+    await new Promise(resolve => setTimeout(resolve, 2000))
+
     onGenerate({
       budget,
       primaryUse,
@@ -48,6 +56,8 @@ export default function PCBuilderForm({ onGenerate }: PCBuilderFormProps) {
       preferences,
       additionalRequirements
     })
+
+    setIsLoading(false)
   }
 
   return (
@@ -75,9 +85,15 @@ export default function PCBuilderForm({ onGenerate }: PCBuilderFormProps) {
                 type="number"
                 value={budget}
                 onChange={(e) => setBudget(e.target.value)}
+                onFocus={() => setFocusedField('budget')}
+                onBlur={() => setFocusedField(null)}
                 min="350"
                 max="10000"
-                className="w-full bg-white/5 backdrop-blur-sm text-white px-4 py-4 rounded-xl border border-white/10 focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 focus:outline-none transition-all duration-200 shadow-lg placeholder:text-slate-400"
+                className={`w-full bg-white/5 backdrop-blur-sm text-white px-4 py-4 rounded-xl border transition-all duration-200 shadow-lg placeholder:text-slate-400 focus:outline-none ${
+                  focusedField === 'budget'
+                    ? 'border-blue-400 focus:ring-2 focus:ring-blue-400/20 scale-[1.02]'
+                    : 'border-white/10 hover:border-white/20'
+                }`}
                 placeholder="2500"
               />
               <p className="text-slate-400 text-sm mt-2">Budget range: $350 - $10,000</p>
@@ -170,10 +186,24 @@ export default function PCBuilderForm({ onGenerate }: PCBuilderFormProps) {
 
             <button
               type="submit"
-              className="w-full bg-gradient-to-r from-blue-400 to-cyan-400 hover:from-blue-500 hover:to-cyan-500 text-white py-5 rounded-xl font-semibold text-lg transition-all duration-200 flex items-center justify-center shadow-2xl hover:shadow-blue-400/25 hover:scale-[1.02] transform cursor-pointer"
+              disabled={isLoading}
+              className={`w-full py-5 rounded-xl font-semibold text-lg transition-all duration-200 flex items-center justify-center shadow-2xl transform cursor-pointer ${
+                isLoading
+                  ? 'bg-slate-600 text-slate-400 cursor-not-allowed'
+                  : 'bg-gradient-to-r from-blue-400 to-cyan-400 hover:from-blue-500 hover:to-cyan-500 text-white hover:shadow-blue-400/25 hover:scale-[1.02]'
+              }`}
             >
-              <Star className="w-6 h-6 mr-3" />
-              Generate My PC Build
+              {isLoading ? (
+                <>
+                  <LoadingSpinner size="md" color="white" />
+                  <span className="ml-3">Generating Your Build...</span>
+                </>
+              ) : (
+                <>
+                  <Sparkles className="w-6 h-6 mr-3" />
+                  Generate My PC Build
+                </>
+              )}
             </button>
           </form>
         </div>
