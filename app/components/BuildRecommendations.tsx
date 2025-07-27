@@ -24,7 +24,7 @@ export default function BuildRecommendations({ buildData, onBack }: BuildRecomme
       },
       {
         type: "Gpu",
-        icon: Monitor,
+        icon: Gamepad2,
         name: "NVIDIA GeForce RTX 4060 Ti 8GB",
         description: "Provides hardware acceleration for video editing applications.",
         price: "$399",
