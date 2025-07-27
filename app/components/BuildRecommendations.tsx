@@ -77,7 +77,7 @@ export default function BuildRecommendations({ buildData, onBack }: BuildRecomme
     components: [
       {
         type: "Case",
-        icon: Monitor,
+        icon: Package,
         name: "Lian Li LANCOOL 216",
         description: "A well-ventilated case with a sleek design.",
         price: "$89",
@@ -86,7 +86,7 @@ export default function BuildRecommendations({ buildData, onBack }: BuildRecomme
       },
       {
         type: "Cooler",
-        icon: Cpu,
+        icon: Snowflake,
         name: "ARCTIC Liquid Freezer III 240 A-RGB",
         description: "An efficient liquid cooler to maintain optimal CPU temperatures.",
         price: "$119",
@@ -94,8 +94,8 @@ export default function BuildRecommendations({ buildData, onBack }: BuildRecomme
         neweggLink: "#"
       },
       {
-        type: "Gpu",
-        icon: Monitor,
+        type: "Cpu",
+        icon: Cpu,
         name: "Intel Core Ultra 7 265K",
         description: "A 20-core processor offering excellent performance for creative tasks.",
         price: "$379",
@@ -104,7 +104,7 @@ export default function BuildRecommendations({ buildData, onBack }: BuildRecomme
       },
       {
         type: "Gpu",
-        icon: Monitor,
+        icon: Gamepad2,
         name: "Gigabyte Windforce GeForce RTX 5070 12GB",
         description: "A powerful GPU suitable for all video editing and rendering.",
         price: "$549",
@@ -113,7 +113,7 @@ export default function BuildRecommendations({ buildData, onBack }: BuildRecomme
       },
       {
         type: "Motherboard",
-        icon: Motherboard,
+        icon: CircuitBoard,
         name: "MSI PRO Z890-P WiFi",
         description: "A professional board with modern connectivity and expansion options.",
         price: "$199",
