@@ -28,8 +28,8 @@ export default function Home() {
             </div>
           </div>
           <div className="flex items-center space-x-6">
-            <button className="text-slate-300 hover:text-white transition-all duration-200 px-4 py-2 rounded-lg hover:bg-white/10">Builder</button>
-            <button className="text-slate-300 hover:text-white transition-all duration-200 px-4 py-2 rounded-lg hover:bg-white/10">Support</button>
+            <button className="text-gray-600 hover:text-gray-900 transition-all duration-200 px-4 py-2 rounded-lg hover:bg-gray-100">Builder</button>
+            <button className="text-gray-600 hover:text-gray-900 transition-all duration-200 px-4 py-2 rounded-lg hover:bg-gray-100">Support</button>
           </div>
         </div>
       </header>
