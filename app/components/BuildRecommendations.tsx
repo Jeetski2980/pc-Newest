@@ -146,20 +146,20 @@ export default function BuildRecommendations({ buildData, onBack }: BuildRecomme
           <h1 className="text-4xl font-bold text-white mb-3 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
             Your PC Build Recommendations
           </h1>
-          <p className="text-gray-300 text-lg">AI-curated builds based on your requirements</p>
+          <p className="text-slate-300 text-lg">AI-curated builds based on your requirements</p>
         </div>
       </div>
 
       <div className="space-y-8">
         {/* Budget Build */}
-        <div className="bg-gradient-to-br from-gray-800 to-gray-700 rounded-2xl p-8 shadow-2xl border border-gray-600 hover:shadow-blue-500/10 transition-all duration-300">
+        <div className="bg-white/[0.03] backdrop-blur-xl rounded-2xl p-8 shadow-2xl border border-white/10 hover:shadow-blue-400/10 hover:border-blue-400/20 transition-all duration-300 group">
           <div className="text-center mb-8">
-            <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+            <div className="w-20 h-20 bg-gradient-to-br from-blue-400 to-cyan-400 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-blue-400/25 group-hover:scale-110 transition-transform duration-300">
               <Star className="w-10 h-10 text-white" />
             </div>
             <h2 className="text-3xl font-bold text-white mb-3">{budgetBuild.title}</h2>
             <div className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-3">{budgetBuild.price}</div>
-            <p className="text-gray-300 text-lg">{budgetBuild.description}</p>
+            <p className="text-slate-300 text-lg">{budgetBuild.description}</p>
           </div>
 
           <div className="grid gap-4">
@@ -170,14 +170,14 @@ export default function BuildRecommendations({ buildData, onBack }: BuildRecomme
         </div>
 
         {/* Balanced Build */}
-        <div className="bg-gradient-to-br from-gray-800 to-gray-700 rounded-2xl p-8 shadow-2xl border border-gray-600 hover:shadow-purple-500/10 transition-all duration-300">
+        <div className="bg-white/[0.03] backdrop-blur-xl rounded-2xl p-8 shadow-2xl border border-white/10 hover:shadow-purple-400/10 hover:border-purple-400/20 transition-all duration-300 group">
           <div className="text-center mb-8">
-            <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+            <div className="w-20 h-20 bg-gradient-to-br from-purple-400 to-pink-400 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-purple-400/25 group-hover:scale-110 transition-transform duration-300">
               <Star className="w-10 h-10 text-white" />
             </div>
             <h2 className="text-3xl font-bold text-white mb-3">{balancedBuild.title}</h2>
             <div className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-3">{balancedBuild.price}</div>
-            <p className="text-gray-300 text-lg">{balancedBuild.description}</p>
+            <p className="text-slate-300 text-lg">{balancedBuild.description}</p>
           </div>
 
           <div className="grid gap-4">
