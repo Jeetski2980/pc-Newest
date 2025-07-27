@@ -170,14 +170,14 @@ export default function BuildRecommendations({ buildData, onBack }: BuildRecomme
         </div>
 
         {/* Balanced Build */}
-        <div className="bg-gray-800 rounded-xl p-6">
-          <div className="text-center mb-6">
-            <div className="w-16 h-16 bg-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-              <Star className="w-8 h-8 text-white" />
+        <div className="bg-gradient-to-br from-gray-800 to-gray-700 rounded-2xl p-8 shadow-2xl border border-gray-600 hover:shadow-purple-500/10 transition-all duration-300">
+          <div className="text-center mb-8">
+            <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+              <Star className="w-10 h-10 text-white" />
             </div>
-            <h2 className="text-2xl font-bold text-white mb-2">{balancedBuild.title}</h2>
-            <div className="text-3xl font-bold text-blue-400 mb-2">{balancedBuild.price}</div>
-            <p className="text-gray-400">{balancedBuild.description}</p>
+            <h2 className="text-3xl font-bold text-white mb-3">{balancedBuild.title}</h2>
+            <div className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-3">{balancedBuild.price}</div>
+            <p className="text-gray-300 text-lg">{balancedBuild.description}</p>
           </div>
 
           <div className="grid gap-4">
