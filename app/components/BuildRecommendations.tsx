@@ -33,7 +33,7 @@ export default function BuildRecommendations({ buildData, onBack }: BuildRecomme
       },
       {
         type: "Motherboard",
-        icon: Motherboard,
+        icon: CircuitBoard,
         name: "ASUS TUF Gaming Z690-Plus WiFi DDR4",
         description: "A reliable motherboard with Wi-Fi support and expansion options.",
         price: "$179",
