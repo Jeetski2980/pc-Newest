@@ -33,6 +33,14 @@ export default function PCBuilderForm({ onGenerate }: PCBuilderFormProps) {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
+
+    // Validate budget range
+    const budgetNum = parseInt(budget)
+    if (budgetNum < 350 || budgetNum > 10000) {
+      alert('Budget must be between $350 and $10,000')
+      return
+    }
+
     onGenerate({
       budget,
       primaryUse,
