@@ -3,6 +3,7 @@ import { useState } from 'react'
 import PCBuilderForm from './components/PCBuilderForm'
 import BuildRecommendations from './components/BuildRecommendations'
 import AdSenseSlot from './components/AdSenseSlot'
+import FloatingActions from './components/FloatingActions'
 
 export default function Home() {
   const [showRecommendations, setShowRecommendations] = useState(false)
