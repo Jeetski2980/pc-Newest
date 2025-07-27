@@ -133,17 +133,21 @@ export default function BuildRecommendations({ buildData, onBack }: BuildRecomme
   }
 
   return (
-    <div className="max-w-6xl mx-auto">
+    <div className="max-w-5xl mx-auto">
       <div className="mb-8">
         <button
           onClick={onBack}
-          className="flex items-center text-blue-400 hover:text-blue-300 mb-4"
+          className="group flex items-center text-blue-400 hover:text-blue-300 mb-6 transition-all duration-200 hover:scale-105"
         >
-          <ArrowLeft className="w-5 h-5 mr-2" />
+          <ArrowLeft className="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform duration-200" />
           Back to Builder
         </button>
-        <h1 className="text-3xl font-bold text-white mb-2">Your PC Build Recommendations</h1>
-        <p className="text-gray-400">AI-curated builds based on your requirements</p>
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-3 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            Your PC Build Recommendations
+          </h1>
+          <p className="text-gray-300 text-lg">AI-curated builds based on your requirements</p>
+        </div>
       </div>
 
       <div className="space-y-8">
