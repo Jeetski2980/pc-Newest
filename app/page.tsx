@@ -23,8 +23,8 @@ export default function Home() {
               <span className="text-white font-bold text-lg">S</span>
             </div>
             <div>
-              <h1 className="text-white font-bold text-xl">StackedPC.ai</h1>
-              <p className="text-slate-300 text-sm">AI-Powered PC Builder</p>
+              <h1 className="text-gray-900 font-bold text-xl">StackedPC.ai</h1>
+              <p className="text-gray-600 text-sm">AI-Powered PC Builder</p>
             </div>
           </div>
           <div className="flex items-center space-x-6">
